@@ -1,0 +1,52 @@
+######################################################
+#Grid Path Planning with Deep Reinforcement Learning:#
+#                 Preliminary Results                #
+######################################################
+*single-shot grid-based path finding*
+[ELABORATION]how NN used in grid map for path planning;
+[SOLVED BY]heuristic search method (based on A* and its variations);
+[EXPERIMENT] Using Q-learning algorithm to achieve goal on new map;
+**
+Image pixels as raw input;
+	|
+	[Input]	
+	|	->2 kind of cells;
+	|	|
+	|	->traversable / untraversable;
+	|	|
+	|	->Blocked/white=1 / Unblocked/black=0; 
+	|
+	[Algorithm]
+	|	->which cell/pixel to identify as sought path;
+	|	|
+	|	-> cost: =1, when horizontal or vertical move; =sqrt 2, when diagonal move;
+	|	|
+	|	-> reward: To achieve maximum overall reward;
+	|	|
+	|	-> G algorithm: 3 conditions with corresponding reward policies;
+	|	|
+	|	-> neural networks: CNN;
+	|	
+	[Experiment]
+ 	|	-> e for random posibility, 1-e for predicted ones;
+	|	|
+	|	-> not fully converged yet.
+***
+1.The path planning by NN is not that ideal in case of partial overfit and inperfect converged. 
+2.Heuristic search method applied in grid map
+
+################################################
+#Convolutional Neural Network-Based Robot      #
+#Navigation Using Uncalibrated Spherical Images#
+################################################
+*Vision-based mobile robot navigation*
+[ELABORATION] apply neual networks to classify images from fisheyed cameras for navigation;
+[SOLVED BY] Classification of surroundings with nerual networks, in spherical images, eliminating reference limitation;
+[EXPERIMENT] 360 degree camera, providing spheric images;                  
+**
+Improvement from conventional method to raw-imaged navigation:
+	|       
+	->Eliminating error from rectification and calibration period;
+	|
+	->Solved problem that no reference image to a spherical image navigation;
+  
