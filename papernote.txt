@@ -49,4 +49,19 @@ Improvement from conventional method to raw-imaged navigation:
 	->Eliminating error from rectification and calibration period;
 	|
 	->Solved problem that no reference image to a spherical image navigation;
-  
+
+CNN based robot navigation framework w/ spherical images:[navi. via classification]
+	|
+	->[Directions] Using predefined heading direction {y|y1,y2,...,yn},belongs to r, and {r|r1,r2,...,rn} is the turning options determined by tasks.
+	|
+	->[Functions1] Using above model to calculate the minimum penalty L over entire time range n=1,...,n;
+	|
+	->[Functions2] Inside the function1 there's warping function, and yn is ground truth,denoting actual direction of heading; also Kronecker delta inside;
+	|
+	->[Experiment] Training data collection: manually drive robot several times on predefined path, for model 2;
+			|
+			->navigation with raw network prediction;
+			|
+			->navigation with smoothed network prediction
+
+ 
